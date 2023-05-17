@@ -1,25 +1,38 @@
 {
-  "name": "fireship-next",
+  "name": "nextpocket",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.1.7",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.40.0",
-    "eslint-config-next": "13.4.2",
-    "next": "13.4.2",
-    "postcss": "8.4.23",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "tailwindcss": "3.3.2",
-    "typescript": "5.0.4"
-  }
+    "@headlessui/react": "^1.7.14",
+    "@heroicons/react": "^2.0.18",
+    "@next/eslint-plugin-next": "^13.4.2",
+    "i": "^0.3.7",
+    "install": "^0.13.0",
+    "next": "^13.4.2",
+    "pocketbase": "^0.14.4",
+    "react": "^18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.11.7",
+    "@types/react": "18.0.24",
+    "@types/react-dom": "18.0.8",
+    "autoprefixer": "^10.4.14",
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "postcss": "^8.4.23",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.4"
+  },
+  "description": "Next.js Tutorial",
+  "main": "index.js",
+  "author": "Aeric John <43348893+nemoteric@users.noreply.github.com>",
+  "license": "MIT"
 }
