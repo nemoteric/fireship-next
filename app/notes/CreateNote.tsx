@@ -1,22 +1,18 @@
 // tells Next not to render on server and only on browser
-'use client';
+'use client'
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 export default function CreateNote() {
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
+  const [title, setTitle] = useState('')
+  const [content, setContent] = useState('')
 
-  const router = useRouter();
+  const router = useRouter()
 
   const create = async () => {
     // const db = new PocketBase('http://127.0.0.1:8090');
-
-    // await db.records.create('notes', {
-    //   title,
-    //   content,
-    // });
+    // const notes = db.collection('notes');
 
     await fetch('http://127.0.0.1:8090/api/collections/notes/records', {
       method: 'POST',
@@ -27,29 +23,29 @@ export default function CreateNote() {
         title,
         content,
       }),
-    });
+    })
 
-    setContent('');
-    setTitle('');
+    setContent('')
+    setTitle('')
     // automatically updates page when new noted added without full page refresh
-    router.refresh();
-  };
+    router.refresh()
+  }
 
   return (
     <form onSubmit={create}>
       <h3>Create a new Note</h3>
       <input
-        type='text'
-        placeholder='Title'
+        type="text"
+        placeholder="Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
       />
       <textarea
-        placeholder='Content'
+        placeholder="Content"
         value={content}
         onChange={(e) => setContent(e.target.value)}
       />
-      <button type='submit'>Create note</button>
+      <button type="submit">Create note</button>
     </form>
-  );
+  )
 }
