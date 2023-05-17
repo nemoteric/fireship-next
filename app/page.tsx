@@ -1,4 +1,4 @@
-import 'globals';
+import 'globals'
 
 export default function HomePage() {
   return (
@@ -6,5 +6,5 @@ export default function HomePage() {
       <h1>Home</h1>
       <p>Some Content</p>
     </div>
-  );
+  )
 }

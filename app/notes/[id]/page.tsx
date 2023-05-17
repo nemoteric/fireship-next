@@ -1,5 +1,5 @@
 // import PocketBase from "pocketbase";
-import styles from "../Notes.module.css";
+import styles from '../Notes.module.css'
 
 // export const dynamic = 'auto',
 //   dynamicParams = true,
@@ -11,19 +11,16 @@ import styles from "../Notes.module.css";
 async function getNote(noteId: string) {
   //const db = new PocketBase('http://127.0.0.1:8090');
   //const data = await db.records.getList('notes');
-  const res = await fetch(
-    `http://127.0.0.1:8090/api/collections/notes/records/${noteId}`,
-    {
-      // Incremental Static Regeneration
-      next: { revalidate: 10 },
-    }
-  );
-  const data = await res.json();
-  return data;
+  const res = await fetch(`http://127.0.0.1:8090/api/collections/notes/records/${noteId}`, {
+    // Incremental Static Regeneration
+    next: { revalidate: 10 },
+  })
+  const data = await res.json()
+  return data
 }
 
 export default async function NotePage({ params }: any) {
-  const note = await getNote(params.id);
+  const note = await getNote(params.id)
 
   return (
     <div>
@@ -34,5 +31,5 @@ export default async function NotePage({ params }: any) {
         <p>{note.created}</p>
       </div>
     </div>
-  );
+  )
 }
