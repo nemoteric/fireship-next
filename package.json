@@ -20,7 +20,7 @@
     "pocketbase": "^0.14.4",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
-    "wrangler": "^2.20.0"
+    "wrangler": "^3.1.1"
   },
   "devDependencies": {
     "@swc/cli": "^0.1.62",
