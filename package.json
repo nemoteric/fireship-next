@@ -16,7 +16,7 @@
     "@vercel/analytics": "^1.0.1",
     "i": "^0.3.7",
     "install": "^0.13.0",
-    "next": "^13.4.2",
+    "next": "^13.5.0",
     "pocketbase": "^0.14.4",
     "react": "^18.2.0",
     "react-dom": "18.2.0",
